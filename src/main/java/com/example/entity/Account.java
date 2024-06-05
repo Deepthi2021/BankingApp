@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table
 public class Account {
+	private double accountBalance;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long account_id;
@@ -49,4 +50,7 @@ public class Account {
 		return "Account [account_id=" + account_id + ", account_holder_name=" + account_holder_name
 				+ ", account_balance=" + account_balance + "]";
 	}
+	 public double getAccountBalance() {
+	        return accountBalance;
+	    }
 }
